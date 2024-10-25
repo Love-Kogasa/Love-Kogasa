@@ -63,8 +63,8 @@ function postServer( date, content ){
                     <p>找不到这篇文章呢！请检查网络或者有没有本帖文件</p>
                 </div>`
             } else {
-                let next = posts[req.index + 1],
-                  rnext = posts[req.index - 1]
+                let next = posts[Number(req.index) + 1],
+                  rnext = posts[Number(req.index) - 1]
                 content.innerHTML = `<div class="post">
                     <img width="100%" src="${(posts[req.index] && posts[req.index].icon) || "./src/post.jpg"}"/>
                     <div class="info">
@@ -73,7 +73,7 @@ function postServer( date, content ){
                         ${marked.parse(await request.text())}
                     </div>
                 </div><div class="desp">
-                    <nav><a href="${(next && next.path) || "#"}">${(next && next.title) || "没有上一篇了"}</a> | <a href="${(rnext && rnext.path) || "#"}">${(rnext && rnext.path) || "没有下一篇了"}</a></nav>
+                    <nav><a href="${rnext == null ? "#" : "?path=" + encodeURI(rnext.link)}">${rnext == null ? "没有上一篇了" : rnext.title}</a> | <a href="${next == null ? "#" : "?path=" + encodeURI(next.link)}">${next == null ? "没有下一篇了" : next.title}</a></nav>
                 </div>`
             }
         }
