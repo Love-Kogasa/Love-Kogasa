@@ -16,7 +16,7 @@ function index( date, content ){
             </div>
         </div>`)
     }
-    content.innerHTML = posteles.join( "" )
+    content.innerHTML = posteles.reverse().join( "" )
     hljs.highlightAll()
     timeUpDate( date )
     setInterval( function(){
@@ -54,7 +54,7 @@ function postServer( date, content ){
                     </div>
                 </div>`)
             }
-            content.innerHTML = posteles.join( "" )
+            content.innerHTML = posteles.reverse().join( "" )
         } else {
             var request = await fetch( req.path )
             if( !request.ok ){
