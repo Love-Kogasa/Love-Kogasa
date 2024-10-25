@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>lovekogasa の 赛博小屋</title>
+    <link rel="stylesheet" href="src/hl.default.min.css">
+    <link rel="stylesheet" href="src/index.css">
+    <script src="src/highlight.min.js"></script>
+    <script src="posts/readdir.js"></script>
+    <script src="src/index.js"></script>
+  </head>
+  <body onload="index( date, content )">
+    <div class="navbar">
+      <span class="menu" onclick="navmenu.classList.toggle('show')">
+        <div></div>
+        <div></div>
+        <div></div>
+      </span>
+      <i>LoveKogasa's Blog</i>
+    </div>
+    <div class="side-nav" align="center" id="navmenu">
+      <img width="40%" class="avatar" src="favicon.ico" />
+      <br><font size="5"><i>L<u>ovekogasa</u></i></font><br><br>
+      <a class="button" href="">首页</a>
+      <a class="button" href="post.html">帖子</a>
+      <a class="button" href="friends.html">友链</a>
+      <a class="button" href="https://b23.tv/9KjEED4">BiliBili</a>
+      <a class="button">...</a>
+    </div>
+    <div class="desp">
+      <img width="35%" class="avatar" src="favicon.ico" />
+      <br><font size="5"><i>L<u>ovekogasa</u></i></font><br>
+      一个Js爱好者 + 车万人 + MinecraftPlayer + Linux用户 + 希尔薇厨<br>
+      以及手机党...
+      <br><br>
+      <nav>
+      <a href="post.html">帖子</a> | 
+      <a href="#content">最新帖子</a></nav>
+    </div>
+    <center id="content">
+    <div class="content">
+      <div class="lds-ripple"><div></div><div></div></div><br>
+      <h3>Loading ....</h3>
+    </div>
+    </center>
+    <br>
+    <div class="desp">
+      <nav><a href="https://b23.tv/9KjEED4">Bilibili</a> | 
+      <a href="#">NPM</a> | 
+      <a href="https://github.com/Love-Kogasa/">Github</a></nav>
+      <span id="date">loading...</span><br>
+      <script async src="src/finicounter.js"></script>
+      <span id="finicount_views"></span>
+    </div>
+  </body>
+</html>
