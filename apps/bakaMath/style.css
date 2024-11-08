@@ -1,0 +1,95 @@
+body {
+   padding: 5%;
+   background-color: #EFF;
+   background-image: url( "bg.jpg" );
+   background-position: center 0px;
+   background-size: auto 900px;
+   color: #FFF;
+}
+
+.navbar {
+   display: block;
+   background-color: #354F78;
+   box-shadow: 0px 7px 0px rgba(0,0,0,0.2);
+   position: fixed;
+   color: #FFF;
+   padding: 1%;
+   font-size: 150%;
+   width: 100%;
+   top: 0%;
+   left: 0%;
+}
+
+.cirno-input {
+   border-bottom: 2px solid #4789FF;
+   color: #71A4FF;
+   padding-left: 5px;
+   font-size: 150%;
+   margin: 10px;
+}
+
+.content {
+   border-left: 2.5px solid #1B00FF;
+   padding: 2%;
+}
+
+.content > h {
+   border-bottom: 2px solid #FFF;
+   display: block;
+   font-size: 190%;
+}
+
+.content > subh {
+   margin-bottom: 10px;
+   display: block;
+   color: #FFF;
+}
+
+.btn {
+   background-color: #354F78;
+   color: white;
+   padding: 1%;
+   padding-left: 3%;
+   padding-right: 3%;
+   border-radius: 5px;
+   font-size: 120%;
+}
+
+#keyboard {
+   background-color: #FAFFFE;
+   /*border-radius: 20px;*/
+   position: fixed;
+   display: block;
+   top: 50%;
+   right: 5%;
+   height: 275px;
+   width: 250px;
+   padding: 2%;
+   box-shadow: 7px 7px 0px rgba(0,0,0,0.2);
+   resize: both;
+}
+
+#keyboard > .key {
+   display: inline-block;
+   background-color: #EEE;
+   transition: background-color 0.5s ease;
+   color: #000;
+   padding: 5px;
+   font-size: 150%;
+   width: 45px;
+   height: 45px;
+   margin: 0px;
+   text-decoration: none;
+   border-bottom: 2px solid #DDD;
+}
+
+#keyboard > .key:active {
+   background-color: #FBFDFD;
+}
+
+#keyboard > .linekey {
+   height: 50px;
+   font-size: 125%;
+   color: #006154;
+}
+

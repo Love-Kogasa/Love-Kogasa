@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>⑨式计算器</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="nineify.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <i><b><font color="lightblue" size="6">⑨</font></b></i> 式计算器
+    </div>
+    <br><br>
+    <div class="content">
+      <h>⑨式计算器</h>
+      <subh>将任何整数以及整数式转换为baka(9)算式<br>下面事生成的⑨算式awa</subh>
+      <div class="cirno-input" id="nine">9-9</div>
+      <div align="right" style="margin: 10px;">
+        <a class="btn" onclick="copy( nine.innerHTML )">复制数字</a>
+      </div>
+      <br>
+      本页面由 <a href="https://love-kogasa.github.io/Love-Kogasa"><i>@love-kogasa</i></a> 编写<br>
+      用于将数据编码成<i><b><font color="lightblue">⑨</font></b></i>算式的库 <a href="https://www.npmjs.com/package/nineify"><i>Nineify</i></a><br>
+      -<br>
+    </div>
+    <div id="keyboard">
+      <div class="linekey" id="shownum">0</div>
+      <a class="key" onclick="simpleKey( shownum, this )">1</a>
+      <a class="key" onclick="simpleKey( shownum, this )">2</a>
+      <a class="key" onclick="simpleKey( shownum, this )">3</a>
+      <a class="key" onclick="simpleKey( shownum, this )">C</a><br>
+      <a class="key" onclick="simpleKey( shownum, this )">4</a>
+      <a class="key" onclick="simpleKey( shownum, this )">5</a>
+      <a class="key" onclick="simpleKey( shownum, this )">6</a>
+      <a class="key" onclick="simpleKey( shownum, this )">+</a><br>
+      <a class="key" onclick="simpleKey( shownum, this )">7</a>
+      <a class="key" onclick="simpleKey( shownum, this )">8</a>
+      <a class="key" onclick="simpleKey( shownum, this )">9</a>
+      <a class="key" onclick="simpleKey( shownum, this )">-</a><br>
+      <a class="key" onclick="simpleKey( shownum, this )">=</a>
+      <a class="key" onclick="simpleKey( shownum, this )">0</a>
+      <a class="key" onclick="simpleKey( shownum, this )">×</a>
+      <a class="key" onclick="simpleKey( shownum, this )">÷</a>
+    </div>
+  </body>
+</html>
