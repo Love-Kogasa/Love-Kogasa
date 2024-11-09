@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>QNick Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="index.js"></script>
+    <script>
+      function appendName( txt, ao = "name" ){
+        var inp = document.getElementById( ao )
+        inp.value += txt
+        inp.oninput()
+      }
+      async function copy( dt ){
+        await navigator.clipboard.writeText( dt )
+        window.alert( "复制成功^w^" )
+      }
+      function netease(){
+        window.alert( "敬请期待吧\n本来是想用某网易mc名称生成器的api\n可惜那玩意不允许跨域" )
+      }
+    </script>
+  </head>
+  <body onload="main( colors )">
+    <div class="navbar">
+      QNick Generator
+    </div><br>
+    <div class="title">QNick Generator</div>
+    <div class="desc">在线一键生成带尾巴，颜色<b>(需要QQVIP Vip)</b>，特殊符号的QQ昵称，以下是参考的一些东东<br>
+    <a href="https://cloud.tencent.com/developer/article/1857834"><i>@参考文章</i></a> 以及 <a href="https://www.npm.com/package/qtail-js"><i>@Qtail</i></a></div>
+    <div class="form">
+      <label-top>Generate Now</label-top>
+      <label>名称(必填): </label>
+      <input type="text" id="name">
+      <label>尾巴(必填): </label>
+      <input type="text" id="name2">
+      <label>添加一些颜色吧</label>
+      <label-top>随便哦</label-top>
+      <div class="colorTable" id="colors">
+        <a class="aColor">Loading...</a>
+      </div>
+      <label-top></label-top>
+      <label>挑一个精致的后缀吧！</label>
+      <label-top>哪个都行哦</label-top>
+      <div class="colorTable" id="syms">
+        <a class="aColor">Loading...</a>
+      </div>
+      <label-top></label-top>
+      <label>你的新Nick</label>
+      <label-top id="nick">None</label-top>
+      <br>
+      <div align="right">
+        <a class="btn" onclick="copy( nick.innerHTML )">复制！</a>
+        <a class="btn" onclick="netease()">随机一个！</a><br>
+      </div>
+      <br>
+      <br>
+      <font color="red" id="log">目前无错误</font>
+    </div><br>
+    <div class="title">About</div>
+    <div class="desc">本页面由 <a href="https://love-kogasa.github.io/Love-Kogasa"><i>@love-kogasa</i></a> 制作<br>QQ颜色以及颜文字对照表<font color="lightblue">(类型: string[])</font> <a href="./color.js"><i>点我Visit</i></a></div>
+  </body>
+</html>
