@@ -4,5 +4,5 @@
 https://love-kogasa.github.io/Love-Kogasa/apps/bakaMath/index.html.  
 ***
 相关库: Nineify  
-www.npm.com/package/nineify  
+www.npmjs.com/package/nineify  
 用于将一些数据转换为9算式的形式，支持解码，支持JSON
