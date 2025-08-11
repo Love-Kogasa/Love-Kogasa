@@ -27,10 +27,6 @@ var l10n = {
     }
   },
   renderAll( language = navigator.language ) {
-    var passed = []
-    var langs = Array.from(document.getElementsByTagName( "lang" ))
-    langs.forEach( lang => {
-      this.render( lang.parentElement, language )
-    })
+    render( document.body )
   }
 }
