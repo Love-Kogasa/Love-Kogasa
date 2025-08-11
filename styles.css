@@ -1,0 +1,187 @@
+@import "css/lang.css";
+@import "css/rain.css";
+
+:root {
+  --border: #D6FDFF;
+  --border-light: #40D2DA;
+}
+
+/* 宽度 */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* 轨道 */
+::-webkit-scrollbar-track {
+  background: #00000000;
+}
+
+/* 滑块 */
+::-webkit-scrollbar-thumb {
+  background: #DFFFFE99;
+  border-radius: 5px;
+}
+
+/* 鼠标悬停时的滑块 */
+::-webkit-scrollbar-thumb:hover {
+  background: #DFFFFE;
+}
+
+* {
+  transition : all 0.5s ease;
+}
+
+body {
+  background-image: url( "imgs/bg.png" );
+  /* download from https://wall.alphacoders.com/big.php?i=1126528 */
+  background-size: cover;
+  background-position: center 0px;
+  min-height: 100vh;
+  color: #2D0037;
+}
+
+.container {
+  height: 79vh;
+  max-height: 79vh;
+  margin-top: 4vh;
+  width: calc( 77vw - 10px );
+  margin-left: 5vw;
+  border: 0.5em dashed var( --border );
+  padding: 10px;
+  word-break: break-all;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+@font-face {
+  font-family: "ch";
+  src: url( "css/chinese.ttf" );
+}
+
+.text-container {
+  background-color: #FFFFFF22;
+  /*background-image: linear-gradient( to right bottom, var( --bg1 ), var( --bg2 ));*/
+  backdrop-filter: blur( 2px ) contrast( 120% );
+  height: calc( 100% - 2em );
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 1em;
+  overflow-y: auto;
+  font-family: cursive, "ch";
+  font-size: 1.2em;
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 100ch;
+}
+
+.header > .left {
+  display: inline-block;
+  width: 30%;
+}
+
+.header > .left > .avatar {
+  width: 100%;
+  border-radius: 50%;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.header > .right {
+  display: inline-block;
+  width: 60%;
+  margin-left: 10%;
+  vertical-align: top;
+  margin-top: 1ch;
+}
+
+.title {
+  font-size: 1.4em;
+  margin: none;
+  padding: none;
+}
+
+.description {
+  font-size: 0.9em;
+  color: #D4D4D4;
+}
+
+.bg-content {
+  background-color: #FFFFFF99;
+  font-size: 0.9em;
+  border-radius: 10px;
+  padding: 1px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.small-icon {
+  width: 1em;
+  height: 1em;
+  margin-left: 4px;
+}
+
+hr {
+  width: 50%;
+  border: none;
+  border-top: 0.4em dashed var( --border );
+  filter: drop-shadow( 0px 0px 2em var( --border-light ) );
+  margin-left: 0px;
+}
+
+.body {
+  font-size: 0.9em;
+  overflow-y: auto;
+  /*max-height: 20%;*/
+}
+
+.hide {
+  background-color: black;
+  color: black;
+}
+
+.hide:hover {
+  background-color: #00000000;
+  color: black;
+}
+
+li {
+  list-style-type: circle;
+}
+
+a {
+  text-decoration: none;
+  color: #001F93;
+}
+
+a:visited {
+  color: #001F93;
+}
+
+.list {
+  margin-left: 1em;
+}
+
+.card {
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 10px;
+  /*background-color: #FFFFFFAA;*/
+  background-image: url( "imgs/card.png" );
+  background-size: 100% 100%;
+  margin-top: 10px;
+}
+
+#projects {
+  margin-bottom: 10px;
+}
+
+@media all and (orientation: landscape) {
+  .container {
+    width: 30em;
+    margin-left: calc( 50vw - 15em - 20px );
+    max-height: 85vh;
+    height: 85vh;
+  }
+} 

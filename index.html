@@ -1,57 +1,100 @@
-<!doctype html>
+<!doctype>
 <html>
   <head>
+    <title>Love-Kogasa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>lovekogasa の 赛博小屋</title>
-    <link rel="stylesheet" href="src/hl.default.min.css">
-    <link rel="stylesheet" href="src/index.css">
-    <script src="src/highlight.min.js"></script>
-    <script src="posts/readdir.js"></script>
-    <script src="src/index.js"></script>
+    <meta name="description" content="Love-Kogasa的个人页/个人导航页。">
+    <meta name="keywords" content="javascript,development,Love-Kogasa">
+    <link rel="stylesheet" href="styles.css">
+    <script async src="https://finicounter.eu.org/finicounter.js"></script>
+    <script src="js/l10n.js"></script>
+    <script src="js/rain.js"></script>
+    <script src="js/index.js"></script>
   </head>
-  <body onload="index( date, content )">
-    <div class="navbar">
-      <span class="menu" onclick="navmenu.classList.toggle('show')">
-        <div></div>
-        <div></div>
-        <div></div>
-      </span>
-      <i>LoveKogasa's Blog</i>
-    </div>
-    <div class="side-nav" align="center" id="navmenu">
-      <img width="40%" class="avatar" src="favicon.ico" />
-      <br><font size="5"><i>L<u>ovekogasa</u></i></font><br><br>
-      <a class="button" href="">首页</a>
-      <a class="button" href="post.html">帖子</a>
-      <a class="button" href="friends.html">友链</a>
-      <a class="button" href="https://b23.tv/9KjEED4">BiliBili</a>
-      <a class="button">...</a>
-    </div>
-    <div class="desp">
-      <img width="35%" class="avatar" src="favicon.ico" />
-      <br><font size="5"><i>L<u>ovekogasa</u></i></font><br>
-      (新Blog: https://lovekogasa.lapis-net.top，本站不定时发癫()<br>一个Js爱好者 + 车万人 + MinecraftPlayer + Linux用户 + 希尔薇厨<br>
-      以及手机党...
-      <br><br>
-      <nav>
-      <a href="post.html">帖子</a> | 
-      <a href="#content">最新帖子</a></nav>
-    </div>
-    <center id="content">
-    <div class="content">
-      <div class="lds-ripple"><div></div><div></div></div><br>
-      <h3>Loading ....</h3>
-    </div>
-    </center>
-    <br>
-    <div class="desp">
-      <nav><a href="https://b23.tv/9KjEED4">Bilibili</a> | 
-      <a href="#">NPM</a> | 
-      <a href="https://bgithub.xyz/Love-Kogasa/">Github</a></nav>
-      <span id="date">loading...</span><br>
-      <script async src="src/finicounter.js"></script>
-      Visitor: <span id="finicount_views"></span>
+  <body>
+    <div class="container">
+      <audio style="display: none" id="bgm" loop autoplay>
+        <source src="css/rain.mp3" type="audio/mp3">
+      </audio>
+      <div class="text-container">
+        <div class="header">
+          <div class="left">
+            <img class="avatar" src="imgs/avatar.png">
+            <div class="bg-content">
+              <!-- 稍微空格一下就会出bug awa -->
+              <a href="https://github.com/Love-Kogasa/"><img class="small-icon" src="imgs/github-icon.png"></a><a href="https://b23.tv/qT3EQ3j"><img class="small-icon" src="imgs/bilibili-icon.png"></a><a href="1983997053@qq.com"><img class="small-icon" src="imgs/mail-icon.png"></a>
+            </div>
+          </div><div class="right">
+            <span class="title">Love-Kogasa</span>
+            <div class="description">
+              🇨🇳 学生，JavaScript 爱好者，爱玩Minecraft和东方Project
+              <lang en*>🇨🇳 Student, JavaScript Lover, Love Minecraft and TouhouProject</lang>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="body">
+          <div class="description" id="translate">l10N doesn't work? Click Me!</div>
+          Hello，这里是咱的，emm，个人页面<br>
+          你也许会发现这里和以前不太一样了，由于上一个版本太屎了，所以想到就又整了一个，真的<br>
+          <span class="hide"><s>其实是想要<b>is-a.dev</b>提供的域名</s></span><br>
+          页面导航 (＾▽＾) 
+          <div class="list">
+            <li><a href="https://lovekogasa.lapis-net.top">我的个人博客(Hexo & Reimu Theme)</a></li>
+            <li><a href="https://github.com/Love-Kogasa/">我的Github </a></li>
+            <li><a href="https://b23.tv/qT3EQ3j">我的哔哩哔哩</a></li>
+          </div>
+          对了，原先我写的小玩意，更改了页面之后依然有效哦)<br>
+          (似乎还有什么没有写？后面想起来再说叭~)
+          <lang en*>
+            <div class="description" id="translate">l10N doesn't work? Click Me!</div>
+            Hello，This is mine，emm，portfolio site<br>
+            You might find that this place is a bit different from before. Because the "previous version" was so shit, I thought of it and made another one. Really<br>
+            <span class="hide"><s>Actually, I want the good-looking domain name provided by <b>is-a.dev</b></s></span><br>
+            Navigation (＾▽＾) 
+            <div class="list">
+              <li><a href="https://blog.lovekogasa.is-a.dev">My blog (Hexo & Reimu Theme)</a></li>
+              <li><a href="https://github.com/Love-Kogasa/">My Github </a></li>
+              <li><a href="https://b23.tv/qT3EQ3j">My Bilibili (Chinese video platform, similar to niconico)</a></li>
+            </div>
+            By the way, the mini-program I originally wrote is still valid after changing the page)<br>
+            (It seems there's still something left unwritten? I'll talk about it later when I remember. ^w^)
+          </lang>
+        </div>
+        <hr>
+        <div class="projects">
+          咱的最新项目(前五) ˃ʍ˂
+          <div id="projects">
+            LOADING...
+          </div>
+          更多项目见 <a href="https://github.com/Love-Kogasa/">我的Github </a>
+          <lang en*>
+            My latest repos (Top five) ˃ʍ˂
+            <div id="projects">
+              LOADING...
+            </div>
+            <div>
+              See <a href="https://github.com/Love-Kogasa/">My Github </a> for more things
+            </div>
+          </lang>
+        </div>
+        <hr>
+        <div>
+          我喜欢下雨天<br>
+          我喜欢小伞因为她很可爱
+          <div><img src="imgs/welc.jpg" width="50%"></div>
+          <b>自由巴勒斯坦🇵🇸，愿世界和平</b><br>
+          我已经被看了 <span id="finicount_views">114514(Loading)</span> 次了
+          <lang en*>
+            I love rain<br>
+            I love Tatara Kogasa because she is cute
+            <div><img src="imgs/welc.jpg" width="50%"></div>
+            <b>Free Palestine 🇵🇸, may the world be at peace</b><br>
+            I have been viewed <span id="finicount_views">114514(Loading)</span> times
+          </lang>
+        </div>
+      </div>
     </div>
   </body>
 </html>

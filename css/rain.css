@@ -1,0 +1,11 @@
+.rain {
+  position: fixed;
+  z-index: -1;
+  display: none;
+  width: 2px;
+  height: 50px;
+  background-image: linear-gradient(  #BCD2D677, #B9F7FFAA );
+  /*background-color: blue;*/
+  top: 0px;
+  left: 0px;
+}
