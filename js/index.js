@@ -1,4 +1,4 @@
-window.onload = async () => {
+document.addEventListener("DOMContentLoaded", async () => {
   l10n.renderAll()
   new Rain()
   var projPanel = document.getElementById( "projects" )
@@ -24,4 +24,4 @@ window.onload = async () => {
     projPanel = document.getElementById( "projects" )
     projects.forEach(projRender)
   }
-}
+})
