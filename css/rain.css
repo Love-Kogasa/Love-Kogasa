@@ -8,4 +8,5 @@
   /*background-color: blue;*/
   top: 0px;
   left: 0px;
+  transition: all 0.01s linear;
 }
