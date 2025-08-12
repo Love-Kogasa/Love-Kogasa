@@ -3,7 +3,7 @@ var l10n = {
     var langs = Array.from(node.getElementsByTagName( "lang" ))
     langs.forEach( lang => {
       if( has( lang.getAttributeNames(), language ) ) {
-        node.innerHTML = lang.innerHTML
+        lang.parentElement.innerHTML = lang.innerHTML
         return;
       }
     })
@@ -27,6 +27,6 @@ var l10n = {
     }
   },
   renderAll( language = navigator.language ) {
-    render( document.body )
+    this.render( document.body, language )
   }
 }
