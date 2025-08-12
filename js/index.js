@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   projects.forEach(( projRender = ( repo ) => {
     var card = document.createElement( "div" )
     card.className = "card"
-    card.onclick = () => window.open( `https://github.com/${repo.full_name}` )
+    card.onclick = () => window.location.href = `https://github.com/${repo.full_name}`
     var title = document.createElement( "div" )
     title.className = "title"
     title.textContent = repo.name
