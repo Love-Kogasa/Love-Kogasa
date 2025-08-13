@@ -1,6 +1,6 @@
 .rain {
   position: fixed;
-  z-index: -1;
+  z-index: -2;
   display: none;
   width: 2px;
   height: 50px;
@@ -9,4 +9,12 @@
   top: 0px;
   left: 0px;
   transition: all 0.01s linear;
+}
+
+.cloud {
+  z-index: -1;
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
 }
