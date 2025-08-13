@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
   l10n.renderAll()
   new Rain()
- // new Cloud()
   var projPanel = document.getElementById( "projects" )
   var translate = document.getElementById( "translate" )
   var projRender

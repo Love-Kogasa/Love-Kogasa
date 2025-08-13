@@ -48,8 +48,9 @@ class ACloud {
   y = 0
   element = (() => {
     var img = new Image()
-    img.className = "cloud"
+    img.className = "cloud" + Math.floor(0.5 + Math.random() * 1.5)
     img.src = "imgs/cloud.png"
+    document.body.appendChild( img )
     return img
   })()
   constructor( x, y, size ) {
@@ -80,9 +81,9 @@ class ACloud {
     return this
   }
   move( x, ok ) {
-    var speed = 0.5
+    var speed = Math.random()
     var inv = setInterval(() => {
-      this.set( this.x + speed )
+      this.setX( this.x + speed )
       if( this.x >= x ){
         clearInterval( inv )
         ok( this )
@@ -122,9 +123,9 @@ class Cloud {
     this.start()
   }
   start() {
-    this.loop = setInterval(() => {
-      this.move()
-    }, 100)
+    var cb = () => this.move()
+    cb()
+    this.loop = setInterval(cb, 700)
     return this
   }
   stop() {
@@ -133,7 +134,7 @@ class Cloud {
   }
   move() {
     var cloud = new ACloud(
-      -100, Math.random() * 50, Math.random()
+      -190, Math.random() * 40 - 25, Math.random()
     )
     cloud.move( 100, () => cloud.remove() )
   }

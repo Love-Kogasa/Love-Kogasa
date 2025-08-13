@@ -17,7 +17,7 @@
   position: fixed;
   top: 0px;
   left: 0px;
-  /*filter: contrast( 50% );*/
+  filter: contrast( 50% );
 }
 
 .cloud1 {
