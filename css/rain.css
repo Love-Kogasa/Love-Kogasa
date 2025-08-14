@@ -10,17 +10,3 @@
   left: 0px;
   transition: all 0.01s linear;
 }
-
-.cloud0, .cloud1 {
-  z-index: -2;
-  display: none;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  /*filter: contrast( 50% );*/
-}
-
-.cloud1 {
-  filter: brightness( 50% ) contrast(170%);
-  z-index: -4;
-}

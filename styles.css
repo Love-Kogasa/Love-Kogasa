@@ -1,4 +1,5 @@
 @import "css/lang.css";
+@import "css/danmaku.css";
 @import "css/rain.css";
 
 :root {
@@ -56,6 +57,10 @@ body {
 @font-face {
   font-family: "ch";
   src: url( "css/chinese.ttf" );
+}
+
+.danmaku {
+  font-family: "ch";
 }
 
 .text-container {
@@ -148,15 +153,25 @@ hr {
 
 li {
   list-style-type: circle;
+  border-left: 4px solid var(--border);
+  margin: 5px;
+  border-radius: 10px;
+  padding: 0.5em;
+  padding-left: 1em;
+  background-color: #FFFFFF22;
+}
+
+li:hover {
+  border-left: 4px solid var(--border-light);
 }
 
 a {
   text-decoration: none;
-  color: #001F93;
+  color: #000;
 }
 
 a:visited {
-  color: #001F93;
+  color: #000;
 }
 
 .list {
@@ -167,8 +182,9 @@ a:visited {
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   padding: 10px;
-  /*background-color: #FFFFFFAA;*/
-  background-image: url( "imgs/card.png" );
+  background-color: #FFFFFF55;
+  /*background-image: url( "imgs/card.png" );*/
+  border-left: 4px solid #FFF;
   background-size: 100% 100%;
   margin-top: 10px;
 }

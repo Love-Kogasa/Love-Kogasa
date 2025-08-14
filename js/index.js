@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", async () => {
   l10n.renderAll()
   new Rain()
+  Danmaku.rawplay( {}, await (await fetch( "danmaku.json" )).json() )
   var projPanel = document.getElementById( "projects" )
   var translate = document.getElementById( "translate" )
   var projRender
