@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", async () => {
   l10n.renderAll()
   new Rain()
-  Danmaku.rawplay( {}, await (await fetch( "danmaku.json" )).json() )
+  Danmaku.rawplay( {wait: 1000}, await (await fetch( "danmaku.json" )).json() )
   var projPanel = document.getElementById( "projects" )
   var translate = document.getElementById( "translate" )
   var projRender
@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   translate.onclick = () => {
     l10n.renderAll( "en" )
     projPanel = document.getElementById( "projects" )
+    projPanel.innerHTML = ""
     projects.forEach(projRender)
   }
 })

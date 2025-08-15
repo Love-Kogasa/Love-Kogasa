@@ -1,4 +1,7 @@
 [{
   "msg": "Test For Danmaku.",
   "icon": "imgs/avatar.png"
+}, {
+  "msg": "想在这里发弹幕请联系我邮箱w，这样是为了防止恶意弹幕)",
+  "icon": "imgs/avatar.png"
 }]

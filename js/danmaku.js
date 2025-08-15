@@ -8,7 +8,7 @@ class Danmaku {
     this.message = message
     this.icon = icon
     this.danmaku.style.top = y + "vh"
-    this.setX( -2 - message.length )
+    this.setX( -2 - message.length * 10 )
     if( icon ) {
       var iconEle = new Image()
       iconEle.className = "icon"
@@ -34,11 +34,11 @@ class Danmaku {
         clearInterval( inv )
         ok()
       }
-    }, 50)
+    }, 40)
   }
   setX( x ) {
     this.x = x
-    this.danmaku.style.left = x + "vh"
+    this.danmaku.style.left = x + "vw"
     return this
   }
   static play( option ) {
