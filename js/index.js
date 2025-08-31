@@ -27,5 +27,5 @@ document.addEventListener("DOMContentLoaded", async () => {
     projPanel.innerHTML = ""
     projects.forEach(projRender)
   }
-  statusMsg.textContent = await (await fetch( "./status.txt" )).text()
+  statusMsg.innerHTML = (await (await fetch( "./status.txt" )).text()).replaceAll( "\n", "<br>" )
 })
