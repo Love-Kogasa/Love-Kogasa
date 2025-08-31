@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   Danmaku.rawplay( {wait: 1000}, await (await fetch( "danmaku.json" )).json() )
   var projPanel = document.getElementById( "projects" )
   var translate = document.getElementById( "translate" )
+  var statusMsg = document.getElementById( "statusMsg" )
   var projRender
   var projects = await (await fetch( "https://api.github.com/users/Love-Kogasa/repos" )).json()
   projects = projects.sort(( a, b ) => new Date(b.updated_at) - new Date(a.updated_at) ).slice( 0, 5 )
@@ -26,4 +27,5 @@ document.addEventListener("DOMContentLoaded", async () => {
     projPanel.innerHTML = ""
     projects.forEach(projRender)
   }
+  statusMsg.textContent = await (await fetch( "./status.txt" )).text()
 })
