@@ -1,7 +1,7 @@
 ## Love-Kogasa
 学生，JavaScript 爱好者，爱玩Minecraft和東方Project  
 Student, JavaScript Fans, Love Minecraft and TouhouProject  
-[地球三体组织成员](https://lovekogasa.1eto.ct.ws/)  
+[地球三体组织成员 -▲-- Earth-Trisolaris Organization](https://lovekogasa.1eto.ct.ws/)  
 ↑这是一个虚拟身份，请不要带入实际角色
 
 ## Contact Info
