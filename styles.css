@@ -193,6 +193,12 @@ a:visited {
   margin-bottom: 10px;
 }
 
+details {
+  background-color: #FFFFFF55;
+  border-radius: 1em;
+  padding: 1em;
+}
+
 @media all and (orientation: landscape) {
   .container {
     width: 30em;
